@@ -10,7 +10,7 @@
             box-sizing: border-box;
         }
 
-      /*add image backgroundا*/
+      /* Add background image */
         body {
             display: flex;
             flex-direction: column;
