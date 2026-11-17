@@ -19,7 +19,7 @@ session_start();
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-image: url('assets/images/pexels-photo-1370295.jpeg'); /* ضع هنا مسار الصورة */
+            background-image: url('assets/images/pexels-photo-1370295.jpeg'); /* Background image path */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -28,7 +28,7 @@ session_start();
 
         .form-container {
             width: 400px;
-            background: rgba(255, 255, 255, 0.8); /* شفافية لجعل النموذج واضحًا */
+            background: rgba(255, 255, 255, 0.8); /* Translucent background keeps the form readable */
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
