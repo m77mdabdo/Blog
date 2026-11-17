@@ -6,6 +6,6 @@ if (isset($_SESSION['success'])) {
     } else {
         echo "<div class='alert alert-success'>$messages</div>";
     }
-    unset($_SESSION['success']); // مسح الجلسة بعد العرض
+    unset($_SESSION['success']); // Clear the session message after showing it
 }
 ?>

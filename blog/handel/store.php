@@ -97,28 +97,28 @@ $type=["jpg,jpeg,png,gif,"];
 }
 
 
-// session_start(); // بدء الجلسة
+// session_start(); // Start the session
 // require_once '../inc/conn.php';
 
 // if (isset($_POST['submit'])) {
 //     trim(htmlspecialchars(extract($_POST)));
-//     // // استخراج القيم من $_POST وتنظيفها
+//     // // Read and sanitize the values from $_POST
 //     // $title = trim(htmlspecialchars($_POST['title']));
 //     // $body = trim(htmlspecialchars($_POST['body']));
-//     // $user_id = 1; // يجب استبدال هذا بالقيمة الصحيحة لـ user_id
+//     // $user_id = 1; // Replace with the real user_id
 
-//     // معالجة الصورة
+//     // Handle the image
 //     $image = $_FILES['image'];
 //     $image_name = $image['name'];
 //     $tmpName_image = $image['tmp_name'];
 //     $image_error = $image['error'];
-//     $image_size = $image['size'] / (1024 * 1024); // حجم الصورة بالميجابايت
+//     $image_size = $image['size'] / (1024 * 1024); // Image size in MB
 
 //     $ext = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
-//     $newName = uniqid() . time() . ".$ext"; // إنشاء اسم فريد للصورة
-//     $allowed_types = ["jpg", "jpeg", "png", "gif"]; // أنواع الصور المسموح بها
+//     $newName = uniqid() . time() . ".$ext"; // Generate a unique image name
+//     $allowed_types = ["jpg", "jpeg", "png", "gif"]; // Allowed image types
 
-//     // التحقق من الأخطاء
+//     // Validate
 //     $errors = [];
 //     if (empty($title)) {
 //         $errors[] = 'Title is required';
@@ -150,27 +150,27 @@ $type=["jpg,jpeg,png,gif,"];
 //         $errors[] = 'Image size must be less than 1MB';
 //     }
 
-//     // إذا لم تكن هناك أخطاء
+//     // If there are no errors
 //     if (empty($errors)) {
-//         // إدخال البيانات في قاعدة البيانات
+//         // Insert the data into the database
 //         $query = "INSERT INTO posts (`title`, `body`, `image`, `user_id`) VALUES ('$title', '$body', '$newName', '$user_id')";
 //         $runQuery = mysqli_query($conn, $query);
 
 //         if ($runQuery) {
-//             // تحميل الصورة إلى المجلد
+//             // Move the image to the uploads folder
 //             move_uploaded_file($tmpName_image, "upload/$newName");
 //             $_SESSION['success'] = "Post added successfully!";
 //         } else {
 //             $_SESSION['error'] = "Failed to add post: " . mysqli_error($conn);
 //         }
 //     } else {
-//         // تخزين الأخطاء والبيانات في الجلسة
+//         // Store the errors and old input in the session
 //         $_SESSION['title'] = $title;
 //         $_SESSION['body'] = $body;
 //         $_SESSION['errors'] = $errors;
 //     }
 
-//     // إعادة التوجيه إلى الصفحة
+//     // Redirect back to the page
 //     header("location:../addPost.php");
 //     exit();
 // } else {

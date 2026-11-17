@@ -54,7 +54,7 @@ if (isset($_SESSION['error'])) {
 <div class="alert alert-denger "> <?php echo $err ."<br>"; ?></div>
 <?php  }
  
-  unset($_SESSION['error']); // مسح الأخطاء بعد عرضها
+  unset($_SESSION['error']); // Clear the errors after showing them
 }
 ?>
 
